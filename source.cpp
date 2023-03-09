@@ -40,6 +40,10 @@ int main() {
         Basic("Bromine", 35, "Non-metal", 265.8, 332.0),
         Basic("Mercury", 80, "Metal", 234.3210, 629.88)
     };
-
+    std::cout << std::endl << "Printing all elements:" << std::endl;
+    for (Basic& element : elements) {
+        element.Print();
+        std::cout << std::endl;
+    }
     return 0;
 }
