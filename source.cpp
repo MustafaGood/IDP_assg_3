@@ -32,6 +32,14 @@ int main() {
     oxygen.Print();
     iron.Print();
     gold.Print();
+    Basic elements[6] = {
+        oxygen,
+        iron,
+        gold,
+        Basic("Hydrogen", 1, "Non-metal", 13.99, 20.271),
+        Basic("Bromine", 35, "Non-metal", 265.8, 332.0),
+        Basic("Mercury", 80, "Metal", 234.3210, 629.88)
+    };
 
     return 0;
 }
