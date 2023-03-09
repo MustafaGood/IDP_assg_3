@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+using namespace std;
 
 class Basic {
 public:
@@ -17,10 +18,10 @@ public:
         this->boiling_point = boiling_point;
     }
      void Print() {
-        std::cout << "Element: " << name << std::endl;
-        std::cout << "Type: " << type << std::endl;
-        std::cout << "Melting Point: " << melting_point << " K" << std::endl;
-        std::cout << "Boiling Point: " << boiling_point << " K" << std::endl;
+        cout << "Element: " << name << std::endl;
+        cout << "Type: " << type << std::endl;
+        cout << "Melting Point: " << melting_point << " K" << std::endl;
+        cout << "Boiling Point: " << boiling_point << " K" << std::endl;
     }
 
 };
@@ -40,24 +41,24 @@ int main() {
         Basic("Bromine", 35, "Non-metal", 265.8, 332.0),
         Basic("Mercury", 80, "Metal", 234.3210, 629.88)
     };
-    std::cout << std::endl << "Printing all elements:" << std::endl;
+    cout << endl << "Printing all elements:" << endl;
     for (Basic& element : elements) {
         element.Print();
-        std::cout << std::endl;
+        cout << endl;
     }
 
-    std::cout << std::endl << "Printing all metals:" << std::endl;
+    cout << endl << "Printing all metals:" << endl;
     for (Basic& element : elements) {
         if (element.type == "Metal") {
-            std::cout << element.name << std::endl;
+            cout << element.name << endl;
         }
     }
 
-    std::cout << std::endl << "Printing elements with melting point below 0°C and boiling point above 0°C:" << std::endl;
+    cout << endl << "Printing elements with melting point below 0°C and boiling point above 0°C:" << endl;
     for (Basic& element : elements) {
         if (element.melting_point < 273.16 && element.boiling_point > 273.16) {
             element.Print();
-            std::cout << std::endl;
+            cout << endl;
         }
     }
 
