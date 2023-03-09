@@ -53,5 +53,13 @@ int main() {
         }
     }
 
+    std::cout << std::endl << "Printing elements with melting point below 0°C and boiling point above 0°C:" << std::endl;
+    for (Basic& element : elements) {
+        if (element.melting_point < 273.16 && element.boiling_point > 273.16) {
+            element.Print();
+            std::cout << std::endl;
+        }
+    }
+
     return 0;
 }
