@@ -45,5 +45,13 @@ int main() {
         element.Print();
         std::cout << std::endl;
     }
+
+    std::cout << std::endl << "Printing all metals:" << std::endl;
+    for (Basic& element : elements) {
+        if (element.type == "Metal") {
+            std::cout << element.name << std::endl;
+        }
+    }
+
     return 0;
 }
